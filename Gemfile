@@ -9,7 +9,7 @@ group :development do
   gem 'quiet_assets'
   gem 'debugger'
   gem 'better_errors'
-  gem 'bcrypt-ruby', '3.1.2' #for local
+  # gem 'bcrypt-ruby', '3.1.2' #for local
 end
 
 group :assets do
@@ -23,7 +23,7 @@ end
 
 group :production do 
   gem 'rails_12factor'
-  # gem 'bcrypt-ruby', '~> 3.0.1'
+  gem 'bcrypt-ruby', '~> 3.0.1'
 end
 
 gem 'jquery-rails'
