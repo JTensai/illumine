@@ -1,0 +1,8 @@
+<h1>News</h1>
+<% @news.each do |news_item| %>
+  <div>
+    <h3><%= news_item.title %></h3>
+    <p><%= news_item.description %></p>
+    <%= link_to "More...", "http://" + news_item.url %>
+  </div>
+<% end %>

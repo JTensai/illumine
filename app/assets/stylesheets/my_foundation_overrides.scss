@@ -1,0 +1,97 @@
+$row-width: 1400px;
+$column-gutter: 0;
+
+
+// Various global styles
+
+$default-float: left;
+
+// $body-bg: #fff;
+// $body-font-color: #222;
+$body-font-family: "Trebuchet MS", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
+
+// Colors
+
+$primary-color: #B52629; //#1F6FBF;
+$secondary-color: #e9e9e9;
+$alert-color: #B52629;
+$success-color: #499908;
+
+// Make sure border radius matches unless we want it different.
+
+// $global-radius: 3px;
+// $global-rounded: 1000px;
+
+// Inset shadow shiny edges and depressions.
+
+// $shiny-edge-size: 0 1px 0;
+// $shiny-edge-color: rgba(#fff, .5);
+// $shiny-edge-active-color: rgba(#000, .2);
+
+// Top Bar Variables
+
+// $topbar-bg: #222;
+// $topbar-height: 38px;
+
+
+// $topbar-input-height: 2.45em;
+
+// $topbar-title-weight: bold;
+// $topbar-title-font-size: emCalc(17);
+
+// $topbar-dropdown-bg: #222;
+// $topbar-dropdown-link-color: #fff;
+// $topbar-dropdown-link-bg: lighten($topbar-bg, 5%);
+// $topbar-dropdown-toggle-size: 5px;
+// $topbar-dropdown-toggle-color: #fff;
+// $topbar-dropdown-toggle-alpha: 0.5;
+
+// $topbar-link-color: #fff;
+// $topbar-link-color-hover: #fff;
+// $topbar-link-color-active: #fff;
+// $topbar-link-weight: bold;
+// $topbar-link-font-size: emCalc(13);
+// $topbar-link-hover-lightness: -30%; // Darken by 30%
+// $topbar-link-bg-hover: darken($topbar-bg, 3%);
+// $topbar-link-bg-active: darken($topbar-bg, 3%);
+
+// $topbar-dropdown-label-color: #555;
+// $topbar-dropdown-label-text-transform: uppercase;
+// $topbar-dropdown-label-font-weight: bold;
+// $topbar-dropdown-label-font-size: emCalc(10);
+
+
+// Transitions and breakpoint styles
+
+// $topbar-transition-speed: 300ms;
+// $topbar-breakpoint: emCalc(940); // Change to 9999px for always mobile layout
+// $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
+
+// Divider Styles
+
+// $topbar-divider-border-bottom: solid 1px lighten($topbar-bg, 10%);
+// $topbar-divider-border-top: solid 1px darken($topbar-bg, 10%);
+
+// Sticky Class
+
+// $topbar-sticky-class: ".sticky";
+
+// Magellan Variables
+
+$magellan-bg: #333;
+$magellan-padding: 7px;
+
+
+$accordion-navigation-bg-color: #999;
+$accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -10%);
+$accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-content-active-bg-color: #eee;
+
+
+$table-bg: #fff;
+$table-even-row-bg: #fff;
+
+
+@import 'foundation';

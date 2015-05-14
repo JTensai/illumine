@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Illumine" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <% if current_user %>
+      <nav class="top-bar" style="box-shadow: 0 0 15px #222;">
+        <section class="top-bar-section">
+          <h3 class="left" style="color: white; padding: 6px 0 0 20px; font-size: 20px;"><%= link_to current_user.username, root_path, style: "color: #eee;" %></h3>
+          <ul class="right">
+            <li class="divider"></li>
+            <li><%= link_to "News", news_items_path %></li>
+            <li class="divider"></li>
+            <li class="has-form"><%= link_to "Log Out", logout_path, class: "button secondary radius", style: "line-height: 18px; font-size: 13px;" %></li>
+          </ul>
+        </div>
+      </nav>
+    <% end %>
+
+    <div id="title-box">
+      <h1>Illumine</h1>
+    </div>
+
+    <div class="row" id="flash_container">
+      <% flash.each do |name, msg| %>
+
+        <% if name.to_s == "alert" %>
+          <div data-alert id="error_alert" class="large-12 large-centered columns alert-box alert radius" style="padding: 8px; margin: 3px auto; text-align:center;">   
+            <%= msg %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        <% end %>
+
+        <% if name.to_s == "notice" %>
+          <div data-alert id="succes_alert" class="large-12 large-centered columns alert-box success radius" style="padding: 8px; margin: 3px auto; text-align:center;">
+            <%= msg %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        <% end %>
+
+        <% if name.to_s == "error" %>
+          <div data-alert id="notice_alert" class="large-12 large-centered columns alert-box radius" style="padding: 8px; margin: 3px auto; text-align:center;">
+            <%= msg %>
+            <a href="#" class="close">&times;</a>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div id="page">
+      <div class="large-2 columns">
+        <ul class="main-navigation side-nav">
+          <li><%= link_to "News", news_path %></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="large-10 columns main-content-area"><%= yield %></div>
+    </div>
+
+    <%= javascript_include_tag "application" %>
+
+  </body>
+</html>
